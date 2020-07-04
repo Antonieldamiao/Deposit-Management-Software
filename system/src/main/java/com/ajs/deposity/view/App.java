@@ -18,6 +18,8 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("login"));
         stage.setScene(scene);
+        stage.setTitle("Depósito - Login");
+        stage.setResizable(false);
         stage.show();
     }
 
