@@ -36,7 +36,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.1</version>
                 <configuration>
-                    <mainClass>br.com.App</mainClass>
+                    <mainClass>com.ajs.deposity.view.App</mainClass>
                 </configuration>
             </plugin>
         </plugins>

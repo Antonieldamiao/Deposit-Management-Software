@@ -1,7 +1,7 @@
-module br.com {
+module com.ajs.deposity.view {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens br.com to javafx.fxml;
-    exports br.com;
+    opens com.ajs.deposity.view to javafx.fxml;
+    exports com.ajs.deposity.view;
 }
