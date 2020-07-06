@@ -9,31 +9,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="564.0" style="-fx-background-color: #ffe0b2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="516.0" style="-fx-background-color: #ffe0b2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.LoginController">
    <children>
-      <ImageView fx:id="imglogo" fitHeight="246.0" fitWidth="474.0" layoutX="45.0" layoutY="-13.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imglogo" fitHeight="246.0" fitWidth="474.0" layoutX="21.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/img-logo.png" />
          </image>
       </ImageView>
-      <TextField fx:id="TfUsuario" layoutX="191.0" layoutY="211.0" prefHeight="25.0" prefWidth="182.0" />
-      <PasswordField fx:id="PfSenha" layoutX="191.0" layoutY="265.0" prefHeight="25.0" prefWidth="182.0" />
-      <Text fontSmoothingType="LCD" layoutX="191.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" wrappingWidth="79.29931640625">
+      <TextField fx:id="TfUsuario" layoutX="168.0" layoutY="169.0" prefHeight="25.0" prefWidth="182.0" />
+      <PasswordField fx:id="PfSenha" layoutX="166.0" layoutY="223.0" prefHeight="25.0" prefWidth="182.0" />
+      <Text fontSmoothingType="LCD" layoutX="168.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" wrappingWidth="79.29931640625">
       <font>
       <Font size="18.0" />
       </font>
          </Text>
-      <Text fontSmoothingType="LCD" layoutX="191.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="65.29931640625">
+      <Text fontSmoothingType="LCD" layoutX="168.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="65.29931640625">
       <font>
       <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="primaryButton" layoutX="189.0" layoutY="312.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: black;" text="Acessar" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="primaryButton" layoutX="149.0" layoutY="282.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: black;" text="Acessar" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Button>
-      <Button fx:id="btnSair" layoutX="285.0" layoutY="312.0" mnemonicParsing="false" onAction="#sair" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: black;" text="Sair" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="btnSair" layoutX="262.0" layoutY="282.0" mnemonicParsing="false" onAction="#sair" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: black;" text="Sair" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
