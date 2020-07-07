@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 public class HomeController {
 
     @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("login");
+    private void logOff() throws IOException {
+        App.alternarTela("login");
     }
 }
