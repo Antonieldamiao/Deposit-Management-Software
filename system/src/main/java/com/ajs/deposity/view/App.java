@@ -63,7 +63,7 @@ public class App extends Application {
             case "home":
                 stage.setScene(sceneHome);
                 stage.setTitle("Depósito - Início");
-                stage.setResizable(true);
+                stage.setResizable(false);
                 notifyAllListeners("home", userData);
                 break;
             case "products":
