@@ -7,49 +7,49 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="358.0" prefWidth="516.0" style="-fx-background-color: #ffe0b2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="583.0" style="-fx-background-color: #ffe0b2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.HomeController">
    <children>
-      <Button fx:id="secondaryButton" layoutX="210.0" layoutY="307.0" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: black;" text="Fazer LogOff" textFill="WHITE">
+      <Button fx:id="btnLogOff" layoutX="249.0" layoutY="360.0" mnemonicParsing="false" onAction="#logOff" style="-fx-background-color: black;" text="Fazer LogOff" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="149.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="182.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-produto-novo.png" />
          </image>
       </ImageView>
-      <Label layoutX="141.0" layoutY="93.0" text="Produtos">
+      <Label layoutX="174.0" layoutY="95.0" text="Produtos">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="211.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="244.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-empresa-cliente.png" />
          </image>
       </ImageView>
-      <Label layoutX="207.0" layoutY="93.0" text="Clientes">
+      <Label layoutX="240.0" layoutY="95.0" text="Clientes">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="264.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="297.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-finalizar-pedido.png" />
          </image>
       </ImageView>
-      <Label layoutX="262.0" layoutY="93.0" text="Vendas">
+      <Label layoutX="295.0" layoutY="95.0" text="Vendas">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="326.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="359.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/icons8-gráfico-combinado.png" />
          </image>
       </ImageView>
-      <Label layoutX="315.0" layoutY="93.0" text="Relatórios">
+      <Label layoutX="348.0" layoutY="95.0" text="Relatórios">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
