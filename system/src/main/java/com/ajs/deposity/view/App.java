@@ -17,6 +17,10 @@ public class App extends Application {
     private static Stage stage;
     private static Scene sceneLogin;
     private static Scene sceneHome;
+    private static Scene sceneProducts;
+    private static Scene sceneClients;
+    private static Scene sceneSales;
+    private static Scene sceneReports;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
@@ -26,6 +30,18 @@ public class App extends Application {
 
         Parent fxmlHome = loadFXML("home");
         sceneHome = new Scene(fxmlHome);
+
+        Parent fxmlProducts = loadFXML("products");
+        sceneProducts = new Scene(fxmlProducts);
+
+        Parent fxmlClients = loadFXML("clients");
+        sceneClients = new Scene(fxmlClients);
+
+        Parent fxmlSales = loadFXML("sales");
+        sceneSales = new Scene(fxmlSales);
+
+        Parent fxmlReports = loadFXML("reports");
+        sceneReports = new Scene(fxmlReports);
 
         stage = primaryStage;
         primaryStage.setTitle("Depósito - Login");
@@ -49,6 +65,30 @@ public class App extends Application {
                 stage.setTitle("Depósito - Início");
                 stage.setResizable(true);
                 notifyAllListeners("home", userData);
+                break;
+            case "products":
+                stage.setScene(sceneProducts);
+                stage.setTitle("Depósito - Produtos");
+                stage.setResizable(false);
+                notifyAllListeners("products", userData);
+                break;
+            case "clients":
+                stage.setScene(sceneClients);
+                stage.setTitle("Depósito - Clientes");
+                stage.setResizable(false);
+                notifyAllListeners("clients", userData);
+                break;
+            case "sales":
+                stage.setScene(sceneSales);
+                stage.setTitle("Depósito - Vendas");
+                stage.setResizable(false);
+                notifyAllListeners("sales", userData);
+                break;
+            case "reports":
+                stage.setScene(sceneReports);
+                stage.setTitle("Depósito - Relatórios");
+                stage.setResizable(false);
+                notifyAllListeners("reports", userData);
                 break;
         }
     }
