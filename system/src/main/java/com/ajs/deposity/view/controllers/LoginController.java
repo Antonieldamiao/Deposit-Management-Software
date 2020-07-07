@@ -1,6 +1,7 @@
-package com.ajs.deposity.view;
+package com.ajs.deposity.view.controllers;
 
 import java.io.IOException;
+import com.ajs.deposity.view.App;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 
