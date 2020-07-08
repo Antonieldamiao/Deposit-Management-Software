@@ -1,4 +1,4 @@
-package com.ajs.deposity.view.controllers;
+package com.ajs.deposity.view.controllers.home;
 
 import java.io.IOException;
 import com.ajs.deposity.view.App;
