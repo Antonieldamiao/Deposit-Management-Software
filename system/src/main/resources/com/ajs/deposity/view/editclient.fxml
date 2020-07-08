@@ -42,7 +42,7 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
-            <JFXDatePicker fx:id="datePickerClient" defaultColor="BLACK" layoutX="215.0" layoutY="137.0" prefHeight="28.0" prefWidth="443.0" />
+            <JFXDatePicker fx:id="datePickerClient" defaultColor="#ffb74d" layoutX="215.0" layoutY="137.0" prefHeight="28.0" prefWidth="443.0" />
             <Label layoutX="15.0" layoutY="175.0" text="Rua:">
                <font>
                   <Font name="System Bold" size="20.0" />

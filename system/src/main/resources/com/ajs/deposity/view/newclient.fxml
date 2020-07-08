@@ -90,7 +90,7 @@
                </font>
             </Label>
             <JFXTextField fx:id="tfClientState1" focusColor="#ffb74d" layoutX="444.0" layoutY="289.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
-            <JFXDatePicker fx:id="datePickerClient" defaultColor="BLACK" layoutX="215.0" layoutY="137.0" prefHeight="28.0" prefWidth="443.0" />
+            <JFXDatePicker fx:id="datePickerClient" defaultColor="#ffb74d" layoutX="215.0" layoutY="137.0" prefHeight="28.0" prefWidth="443.0" />
          </children></AnchorPane>
       <ImageView fitHeight="75.0" fitWidth="130.0" layoutX="90.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image>
