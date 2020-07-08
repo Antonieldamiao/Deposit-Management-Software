@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="667.0" style="-fx-background-color: #ffb74d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.clients.ClientsController">
+   <children>
+      <AnchorPane layoutY="137.0" prefHeight="337.0" prefWidth="667.0" style="-fx-background-color: #ffe97d;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Nome:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientName" focusColor="#ffb74d" layoutX="77.0" layoutY="17.0" prefHeight="25.0" prefWidth="574.0" unFocusColor="BLACK" />
+            <Label layoutX="15.0" layoutY="53.0" text="CPF:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientCPF" focusColor="#ffb74d" layoutX="57.0" layoutY="56.0" prefHeight="25.0" prefWidth="261.0" unFocusColor="BLACK" />
+            <Label layoutX="327.0" layoutY="55.0" text="ID:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientID" focusColor="#ffb74d" layoutX="354.0" layoutY="57.0" prefHeight="25.0" prefWidth="297.0" unFocusColor="BLACK" />
+            <Label layoutX="15.0" layoutY="95.0" text="Telefone 1:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientTelephone" focusColor="#ffb74d" layoutX="118.0" layoutY="98.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
+            <Label layoutX="17.0" layoutY="136.0" text="Data de Nascimento:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="175.0" text="Rua:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientStreet" focusColor="#ffb74d" layoutX="57.0" layoutY="178.0" prefHeight="25.0" prefWidth="595.0" unFocusColor="BLACK" />
+            <Label layoutX="15.0" layoutY="212.0" text="Cidade:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientCity" focusColor="#ffb74d" layoutX="85.0" layoutY="215.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
+            <Label layoutX="339.0" layoutY="96.0" text="Telefone 2:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientTelephone1" focusColor="#ffb74d" layoutX="442.0" layoutY="99.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
+            <Label layoutX="374.0" layoutY="214.0" text="Estado:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientState" focusColor="#ffb74d" layoutX="444.0" layoutY="216.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
+            <Label layoutX="15.0" layoutY="247.0" text="Bairro:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientDistrict" focusColor="#ffb74d" layoutX="78.0" layoutY="250.0" prefHeight="25.0" prefWidth="297.0" unFocusColor="BLACK" />
+            <Label layoutX="392.0" layoutY="249.0" text="CEP:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientCEP" focusColor="#ffb74d" layoutX="433.0" layoutY="251.0" prefHeight="25.0" prefWidth="220.0" unFocusColor="BLACK" />
+            <Label layoutX="15.0" layoutY="285.0" text="Número:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientCity1" focusColor="#ffb74d" layoutX="98.0" layoutY="288.0" prefHeight="25.0" prefWidth="196.0" unFocusColor="BLACK" />
+            <Label layoutX="305.0" layoutY="287.0" text="Complemento:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tfClientState1" focusColor="#ffb74d" layoutX="444.0" layoutY="289.0" prefHeight="25.0" prefWidth="209.0" unFocusColor="BLACK" />
+            <DatePicker fx:id="datePickerClient" layoutX="213.0" layoutY="139.0" prefHeight="25.0" prefWidth="439.0" />
+         </children></AnchorPane>
+      <ImageView fitHeight="75.0" fitWidth="130.0" layoutX="90.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8-adicionar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="49.0" text="Depósito - Adicionar Cliente">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnCancellClient" buttonType="RAISED" layoutX="347.0" layoutY="501.0" onAction="#clients" prefHeight="37.0" prefWidth="120.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSaveClient" buttonType="RAISED" layoutX="201.0" layoutY="501.0" prefHeight="37.0" prefWidth="120.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

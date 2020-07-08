@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="516.0" style="-fx-background-color: ffcc80;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="516.0" style="-fx-background-color: #ffb74d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.home.LoginController">
    <children>
-      <ImageView fx:id="imglogo" fitHeight="246.0" fitWidth="474.0" layoutX="21.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imglogo" fitHeight="246.0" fitWidth="474.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/img-logo.png" />
          </image>
       </ImageView>
-      <TextField fx:id="TfUsuario" layoutX="168.0" layoutY="292.0" prefHeight="25.0" prefWidth="182.0" />
-      <PasswordField fx:id="PfSenha" layoutX="166.0" layoutY="346.0" prefHeight="25.0" prefWidth="182.0" />
-      <Text fontSmoothingType="LCD" layoutX="168.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" wrappingWidth="79.29931640625">
+      <Text fontSmoothingType="LCD" layoutX="150.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" wrappingWidth="79.29931640625">
       <font>
       <Font size="18.0" />
       </font>
          </Text>
-      <Text fontSmoothingType="LCD" layoutX="168.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="65.29931640625">
+      <Text fontSmoothingType="LCD" layoutX="149.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="65.29931640625">
       <font>
       <Font size="18.0" />
          </font>
       </Text>
-      <Button fx:id="btnAcessar" layoutX="149.0" layoutY="397.0" mnemonicParsing="false" onAction="#Acessar" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: black;" text="Acessar" textAlignment="CENTER" textFill="WHITE">
+      <JFXButton fx:id="btnAcessar" buttonType="RAISED" layoutX="142.0" layoutY="398.0" onAction="#Acessar" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Acessar" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
-      </Button>
-      <Button fx:id="btnSair" layoutX="262.0" layoutY="397.0" mnemonicParsing="false" onAction="#sair" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: black;" text="Sair" textAlignment="CENTER" textFill="WHITE">
+      </JFXButton>
+      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="266.0" layoutY="398.0" onAction="#sair" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Sair" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="16.0" />
          </font>
-      </Button>
+      </JFXButton>
+      <JFXPasswordField fx:id="PfSenha" focusColor="#ffe97d" layoutX="149.0" layoutY="345.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="TfUsuario" focusColor="#ffe97d" layoutX="150.0" layoutY="286.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
    </children>
 </AnchorPane>

@@ -1,4 +1,4 @@
-package com.ajs.deposity.view.controllers;
+package com.ajs.deposity.view.controllers.home;
 
 import com.ajs.deposity.view.App;
 import javafx.fxml.FXML;
@@ -19,6 +19,16 @@ public class Menu {
     @FXML
     private void clients() throws IOException {
         App.alternarTela("clients");
+    }
+
+    @FXML
+    private void newClient() throws IOException {
+        App.alternarTela("newclient");
+    }
+
+    @FXML
+    private void editClient() throws IOException {
+        App.alternarTela("editclient");
     }
 
     @FXML
