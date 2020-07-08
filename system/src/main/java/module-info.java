@@ -3,6 +3,7 @@ module com.ajs.deposity.view {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.persistence;
+    requires com.jfoenix;
 
     opens com.ajs.deposity.view to javafx.fxml;
     opens com.ajs.deposity.view.controllers to javafx.fxml;
