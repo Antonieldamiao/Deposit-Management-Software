@@ -1,4 +1,6 @@
 package com.ajs.deposity.view.controllers.clients;
 
-public class EditClientController {
+import com.ajs.deposity.view.controllers.home.Menu;
+
+public class EditClientController extends Menu {
 }
