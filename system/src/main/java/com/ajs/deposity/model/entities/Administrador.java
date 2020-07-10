@@ -24,12 +24,12 @@ public class Administrador {
     @Column(name = "senha")
     private String senha;
     @OneToMany(mappedBy = "administrador")
-    private List<br.com.jpa.model.Cliente> clientes;
+    private List<Cliente> clientes;
     @ManyToMany
     @JoinTable(name = "GERENCIAPRODUTO",
             joinColumns = @JoinColumn(name = "codAdmin"),
             inverseJoinColumns = @JoinColumn(name = "codProduto")
     )
-    private List<br.com.jpa.model.Produto> produtos;
+    private List<Produto> produtos;
 
 }

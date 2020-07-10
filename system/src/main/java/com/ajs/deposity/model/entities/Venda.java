@@ -25,5 +25,5 @@ public class Venda {
     private String tipo;
     @ManyToOne
     @JoinColumn(name = "codProduto")
-    private br.com.jpa.model.Produto produto;
+    private Produto produto;
 }

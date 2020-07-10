@@ -15,15 +15,15 @@ import javax.persistence.*;
 public class CompraProduto {
     @EmbeddedId
     @EqualsAndHashCode.Include
-    private br.com.jpa.model.CompraProdutoId compraProdutoId;
+    private CompraProdutoId compraProdutoId;
     @Column(name = "quantidade")
     private int quantidade;
     @Column(name = "valor")
     private float valor;
     @OneToOne
     @MapsId("idCliente")
-    private br.com.jpa.model.Cliente cliente;
+    private Cliente cliente;
     @OneToOne
     @MapsId("codProduto")
-    private br.com.jpa.model.Produto produto;
+    private Produto produto;
 }

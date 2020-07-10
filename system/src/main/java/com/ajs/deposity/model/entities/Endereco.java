@@ -30,5 +30,5 @@ public class Endereco {
     private String complemento;
     @OneToOne
     @MapsId("idCliente")
-    private br.com.jpa.model.Cliente cliente;
+    private Cliente cliente;
 }
