@@ -2,7 +2,7 @@ package com.ajs.deposity.model.entities;
 
 
 import lombok.*;
-
+import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
@@ -10,9 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class CompraProduto {
+public class CompraProduto implements Serializable{
     @EmbeddedId
     @EqualsAndHashCode.Include
     private CompraProdutoId compraProdutoId;
@@ -26,4 +25,9 @@ public class CompraProduto {
     @OneToOne
     @MapsId("codProduto")
     private Produto produto;
+
+    public CompraProduto(int quantidade, float valor) {
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
 }

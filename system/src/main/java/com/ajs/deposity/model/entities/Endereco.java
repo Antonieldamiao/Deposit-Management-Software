@@ -1,7 +1,7 @@
 package com.ajs.deposity.model.entities;
 
 import lombok.*;
-
+import java.io.Serializable;
 import javax.persistence.*;
 
 
@@ -10,9 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Endereco {
+public class Endereco implements Serializable{
     @EmbeddedId
     @EqualsAndHashCode.Include
     private EnderecoId enderecoId;
@@ -31,4 +30,13 @@ public class Endereco {
     @OneToOne
     @MapsId("idCliente")
     private Cliente cliente;
+
+    public Endereco(String estado, String cidade, String bairro, String rua, int numero, String complemento) {
+        this.estado = estado;
+        this.cidade = cidade;
+        this.bairro = bairro;
+        this.rua = rua;
+        this.numero = numero;
+        this.complemento = complemento;
+    }
 }

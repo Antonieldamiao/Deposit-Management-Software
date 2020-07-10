@@ -3,6 +3,7 @@ package com.ajs.deposity.model.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
@@ -10,9 +11,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Cliente {
+public class Cliente implements Serializable{
     @Id
     @Column(name = "id")
     @EqualsAndHashCode.Include
@@ -32,6 +32,14 @@ public class Cliente {
     private Endereco endereco;
     @OneToOne(mappedBy = "cliente")
     private CompraProduto compraProduto;
+
+    public Cliente(String id, String cpf, String nome, LocalDate dataNascimento, String telefone){
+        this.id = id;
+        this.cpf = cpf;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.telefone = telefone;
+    }
 
 
 }

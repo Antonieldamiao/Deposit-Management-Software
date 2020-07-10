@@ -1,7 +1,7 @@
 package com.ajs.deposity.model.entities;
 
 import lombok.*;
-
+import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Date;
 
@@ -11,9 +11,8 @@ import java.sql.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Venda {
+public class Venda implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -26,4 +25,9 @@ public class Venda {
     @ManyToOne
     @JoinColumn(name = "codProduto")
     private Produto produto;
+
+    public Venda(int codigo, String tipo) {
+        this.codigo = codigo;
+        this.tipo = tipo;
+    }
 }

@@ -5,6 +5,7 @@ package com.ajs.deposity.model.entities;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -12,9 +13,8 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Administrador {
+public class Administrador implements Serializable{
     @Id
     @Column(name = "codigo")
     @EqualsAndHashCode.Include
@@ -31,5 +31,11 @@ public class Administrador {
             inverseJoinColumns = @JoinColumn(name = "codProduto")
     )
     private List<Produto> produtos;
+
+    public Administrador(String codigo, String nome, String senha) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.senha = senha;
+    }
 
 }

@@ -1,7 +1,7 @@
 package com.ajs.deposity.model.entities;
 
 import lombok.*;
-
+import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,9 +10,8 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Produto {
+public class Produto implements Serializable{
     @Id
     @Column(name = "codBarras")
     @EqualsAndHashCode.Include
@@ -29,4 +28,11 @@ public class Produto {
     private List<Venda> vendas;
     @OneToOne(mappedBy = "produto")
     private CompraProduto compraProduto;
+
+    public Produto(String codBarras, String nome, float preco, int quantidade) {
+        this.codBarras = codBarras;
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
 }
