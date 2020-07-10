@@ -5,7 +5,8 @@ module com.ajs.deposity.view {
     requires java.persistence;
     requires com.jfoenix;
     requires lombok;
-    requires rt;
+    requires java.sql;
+
 
     opens com.ajs.deposity.view to javafx.fxml;
     opens com.ajs.deposity.view.controllers.clients to javafx.fxml;
