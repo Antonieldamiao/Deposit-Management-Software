@@ -24,6 +24,9 @@ public class App extends Application {
     private static Scene sceneNewClient;
     private static Scene sceneEditClient;
     private static Scene sceneSales;
+    private static Scene sceneNewSale;
+    private static Scene sceneEditSale;
+    private static Scene sceneBirthdays;
     private static Scene sceneReports;
 
     @Override
@@ -56,6 +59,15 @@ public class App extends Application {
         Parent fxmlSales = loadFXML("sales");
         sceneSales = new Scene(fxmlSales);
 
+        Parent fxmlNewSale = loadFXML("newsale");
+        sceneNewSale = new Scene(fxmlNewSale);
+
+        Parent fxmlEditeSale = loadFXML("editsale");
+        sceneEditSale = new Scene(fxmlEditeSale);
+
+        Parent fxmlBirthdays = loadFXML("birthdays");
+        sceneBirthdays = new Scene(fxmlBirthdays);
+
         Parent fxmlReports = loadFXML("reports");
         sceneReports = new Scene(fxmlReports);
 
@@ -63,7 +75,7 @@ public class App extends Application {
         primaryStage.setTitle("Depósito - Login");
         primaryStage.setScene(sceneLogin);
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("img/icons8-finalizar-pedido.png")));
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("img/icons8-movimento-de-estoque-color.png")));
         primaryStage.show();
 
     }
@@ -123,6 +135,24 @@ public class App extends Application {
                 stage.setTitle("Depósito - Vendas");
                 stage.setResizable(false);
                 notifyAllListeners("sales", userData);
+                break;
+            case "newsale":
+                stage.setScene(sceneNewSale);
+                stage.setTitle("Depósito - Adicionar Venda");
+                stage.setResizable(false);
+                notifyAllListeners("newsale", userData);
+                break;
+            case "editsale":
+                stage.setScene(sceneEditSale);
+                stage.setTitle("Depósito - Editar Venda");
+                stage.setResizable(false);
+                notifyAllListeners("editsale", userData);
+                break;
+            case "birthdays":
+                stage.setScene(sceneBirthdays);
+                stage.setTitle("Depósito - Aniversariantes");
+                stage.setResizable(false);
+                notifyAllListeners("birthdays", userData);
                 break;
             case "reports":
                 stage.setScene(sceneReports);

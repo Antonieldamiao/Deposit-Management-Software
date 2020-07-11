@@ -1,20 +1,16 @@
-package com.ajs.deposity.view.controllers.home;
+package com.ajs.deposity.view.controllers.login;
 
 import java.io.IOException;
 import com.ajs.deposity.view.App;
+import com.ajs.deposity.view.controllers.menu.Menu;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 
-public class LoginController {
+public class LoginController extends Menu {
 
     @FXML
     private void Acessar() throws IOException {
         App.alternarTela("home");
     }
 
-    @FXML
-    private void sair(){
-        Platform.exit();
-        System.exit(0);
-    }
 }

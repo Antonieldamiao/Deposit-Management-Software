@@ -1,6 +1,6 @@
 package com.ajs.deposity.view.controllers.clients;
 
-import com.ajs.deposity.view.controllers.home.Menu;
+import com.ajs.deposity.view.controllers.menu.Menu;
 import com.jfoenix.controls.JFXDatePicker;
 import javafx.fxml.FXML;
 

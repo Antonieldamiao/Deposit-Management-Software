@@ -10,7 +10,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffb74d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.sales.SalesController">
    <children>
-      <AnchorPane layoutY="137.0" prefHeight="61.0" prefWidth="900.0" style="-fx-background-color: #ffe97d;" />
+      <AnchorPane layoutY="137.0" prefHeight="61.0" prefWidth="900.0" style="-fx-background-color: #ffe97d;">
+         <children>
+            <JFXButton fx:id="btnAddSale" buttonType="RAISED" layoutX="295.0" layoutY="12.0" onAction="#newSale" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Adicionar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEditSale" buttonType="RAISED" layoutX="403.0" layoutY="12.0" onAction="#editSale" prefHeight="37.0" prefWidth="95.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Editar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnDeleteSale" buttonType="RAISED" layoutX="511.0" layoutY="12.0" prefHeight="37.0" prefWidth="95.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Deletar" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
       <JFXListView fx:id="lvSales" layoutY="198.0" prefHeight="339.0" prefWidth="900.0" />
       <ImageView fitHeight="75.0" fitWidth="130.0" layoutX="141.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -22,21 +39,6 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <JFXButton fx:id="btnAddSale" buttonType="RAISED" layoutX="293.0" layoutY="149.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Adicionar" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="btnEditSale" buttonType="RAISED" layoutX="404.0" layoutY="149.0" prefHeight="37.0" prefWidth="95.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Editar" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
-      <JFXButton fx:id="btnDeleteSale" buttonType="RAISED" layoutX="513.0" layoutY="149.0" prefHeight="37.0" prefWidth="95.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Deletar" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="16.0" />
-         </font>
-      </JFXButton>
       <AnchorPane layoutX="-4.0" layoutY="537.0" prefHeight="67.0" prefWidth="906.0" style="-fx-background-color: #ffe97d;" />
       <JFXButton fx:id="btnBackHome" buttonType="RAISED" layoutX="355.0" layoutY="549.0" onAction="#backHomeScreen" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Voltar para Tela Inicial" textFill="WHITE">
          <font>
