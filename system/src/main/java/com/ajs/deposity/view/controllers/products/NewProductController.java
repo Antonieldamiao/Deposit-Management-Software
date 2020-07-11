@@ -1,4 +1,6 @@
 package com.ajs.deposity.view.controllers.products;
 
-public class NewProductController {
+import com.ajs.deposity.view.controllers.home.Menu;
+
+public class NewProductController extends Menu {
 }

@@ -9,39 +9,40 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="516.0" style="-fx-background-color: #ffb74d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.home.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="516.0" style="-fx-background-color: #ffb74d;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ajs.deposity.view.controllers.home.LoginController">
    <children>
+      <AnchorPane layoutX="117.0" layoutY="262.0" prefHeight="170.0" prefWidth="282.0" style="-fx-background-color: #ffe97d;" />
       <ImageView fx:id="imglogo" fitHeight="246.0" fitWidth="474.0" layoutX="21.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/img-logo.png" />
          </image>
       </ImageView>
-      <Text fontSmoothingType="LCD" layoutX="150.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário" wrappingWidth="79.29931640625">
+      <Text fontSmoothingType="LCD" layoutX="150.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário:" wrappingWidth="79.29931640625">
       <font>
       <Font size="18.0" />
       </font>
          </Text>
-      <Text fontSmoothingType="LCD" layoutX="149.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="65.29931640625">
+      <Text fontSmoothingType="LCD" layoutX="149.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="65.29931640625">
       <font>
       <Font size="18.0" />
          </font>
       </Text>
-      <JFXButton fx:id="btnAcessar" buttonType="RAISED" layoutX="142.0" layoutY="398.0" onAction="#Acessar" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Acessar" textFill="WHITE">
+      <JFXButton fx:id="btnAcessar" buttonType="RAISED" layoutX="142.0" layoutY="451.0" onAction="#Acessar" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Acessar" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="266.0" layoutY="398.0" onAction="#sair" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Sair" textFill="WHITE">
+      <JFXButton fx:id="btnSair" buttonType="RAISED" layoutX="266.0" layoutY="451.0" onAction="#sair" prefHeight="37.0" prefWidth="110.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Sair" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXPasswordField fx:id="PfSenha" focusColor="#ffe97d" layoutX="149.0" layoutY="345.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
+      <JFXPasswordField fx:id="PfSenha" focusColor="#ffb74d" layoutX="149.0" layoutY="370.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXPasswordField>
-      <JFXTextField fx:id="TfUsuario" focusColor="#ffe97d" layoutX="150.0" layoutY="286.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
+      <JFXTextField fx:id="TfUsuario" focusColor="#ffb74d" layoutX="150.0" layoutY="311.0" prefHeight="31.0" prefWidth="217.0" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
