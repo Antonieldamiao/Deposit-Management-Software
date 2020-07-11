@@ -14,7 +14,6 @@ public class AdministradorDao implements EntitiesDao {
 
     @Override
     public boolean addEntitie(Object object) {
-
         return false;
     }
 
@@ -30,7 +29,7 @@ public class AdministradorDao implements EntitiesDao {
 
     @Override
     public Object searchEntitie(Object id) {
-        Administrador administrador = manager.find(Administrador.class,"IDENTIFICADOR");
+        Administrador administrador = manager.find(Administrador.class,(String)id);
         return administrador;
     }
 }

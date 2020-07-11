@@ -5,6 +5,9 @@ import com.ajs.deposity.model.entities.Cliente;
 import com.ajs.deposity.model.interfaces.EntitiesDao;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ClienteDao implements EntitiesDao {
     private ConnectionFactory conFactory;
@@ -14,7 +17,6 @@ public class ClienteDao implements EntitiesDao {
         manager = conFactory.getConnection().createEntityManager();
     }
 
-    
     @Override
     public boolean addEntitie(Object object) {
         manager.getTransaction().begin();
@@ -37,19 +39,19 @@ public class ClienteDao implements EntitiesDao {
     public boolean updateEntitie(Object object) {
         manager.getTransaction().begin();
         Cliente cliente = (Cliente) object;
-        /*SETA VALORES
-        *
-        * cliente.setNome()
-        *
-        * */
+        manager.merge(cliente);
         manager.getTransaction().commit();
         return true;
     }
 
     @Override
     public Object searchEntitie(Object id) {
-
-        Cliente cliente = manager.find(Cliente.class,"IDENTIFICADOR");
+        Cliente cliente = manager.find(Cliente.class,(String)id);
         return cliente;
+    }
+
+    public List<Cliente> getClientes(){
+        List<Cliente> clientes = manager.createQuery("SELECT c FROM Cliente c").getResultList();
+        return clientes;
     }
 }

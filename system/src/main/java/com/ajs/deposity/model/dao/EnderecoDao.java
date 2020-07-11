@@ -2,9 +2,11 @@ package com.ajs.deposity.model.dao;
 
 import com.ajs.deposity.model.connection.ConnectionFactory;
 import com.ajs.deposity.model.entities.Endereco;
+import com.ajs.deposity.model.entities.EnderecoId;
 import com.ajs.deposity.model.interfaces.EntitiesDao;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 public class EnderecoDao implements EntitiesDao{
     private ConnectionFactory conFactory;
@@ -34,13 +36,19 @@ public class EnderecoDao implements EntitiesDao{
     public boolean updateEntitie(Object object) {
         manager.getTransaction().begin();
         Endereco endereco = (Endereco) object;
+        manager.merge(endereco);
         manager.getTransaction().commit();
         return true;
     }
 
     @Override
     public Object searchEntitie(Object id) {
-        Endereco endereco = manager.find(Endereco.class,"IDENTIFICADOR");
+        Endereco endereco = manager.find(Endereco.class,(EnderecoId)id);
         return endereco;
+    }
+
+    public List<Endereco> getEnderecos(){
+        List<Endereco> enderecos = manager.createQuery("SELECT e FROM Endereco e").getResultList();
+        return enderecos;
     }
 }

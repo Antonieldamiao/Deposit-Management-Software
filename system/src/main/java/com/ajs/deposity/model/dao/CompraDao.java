@@ -6,6 +6,7 @@ import com.ajs.deposity.model.entities.Produto;
 import com.ajs.deposity.model.interfaces.EntitiesDao;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 public class CompraDao implements EntitiesDao {
     private ConnectionFactory conFactory;
@@ -15,19 +16,20 @@ public class CompraDao implements EntitiesDao {
     }
 
 
-@Override
-public boolean addEntitie(Object object) {
-    manager.getTransaction().begin();
-    CompraProduto compraProduto = (CompraProduto) object ;
-    manager.persist(compraProduto);
-    manager.getTransaction().commit();
-    return true;
-}
+    @Override
+    public boolean addEntitie(Object object) {
+        manager.getTransaction().begin();
+        CompraProduto compraProduto = (CompraProduto) object ;
+        manager.persist(compraProduto);
+        manager.getTransaction().commit();
+        return true;
+    }
 
     @Override
     public boolean updateEntitie(Object object) {
         manager.getTransaction().begin();
         CompraProduto compraProduto = (CompraProduto) object ;
+        manager.merge(compraProduto);
         manager.getTransaction().commit();
         return true;
     }
@@ -40,11 +42,16 @@ public boolean addEntitie(Object object) {
         manager.getTransaction().commit();
         return true;
     }
+
     @Override
     public Object searchEntitie(Object id) {
-
-        CompraProduto compraProduto = manager.find(CompraProduto.class,"IDENTIFICADOR");
+        CompraProduto compraProduto = manager.find(CompraProduto.class,(String)id);
         return compraProduto;
+    }
+
+    public List<CompraProduto> getCompraProdutos(){
+        List<CompraProduto> compras = manager.createQuery("SELECT cp FROM CompraProduto cp").getResultList();
+        return compras;
     }
 }
 

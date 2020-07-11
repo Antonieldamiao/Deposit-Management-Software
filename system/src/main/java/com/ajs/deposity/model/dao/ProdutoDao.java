@@ -5,6 +5,7 @@ import com.ajs.deposity.model.entities.Produto;
 import com.ajs.deposity.model.interfaces.EntitiesDao;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 
 public class ProdutoDao implements EntitiesDao{
@@ -17,7 +18,7 @@ public class ProdutoDao implements EntitiesDao{
     @Override
     public boolean addEntitie(Object object) {
         manager.getTransaction().begin();
-       Produto produto = (Produto) object;
+        Produto produto = (Produto) object;
         manager.persist(produto);
         manager.getTransaction().commit();
         return true;
@@ -27,6 +28,7 @@ public class ProdutoDao implements EntitiesDao{
     public boolean updateEntitie(Object object) {
         manager.getTransaction().begin();
         Produto produto = (Produto) object;
+        manager.merge(produto);
         manager.getTransaction().commit();
         return true;
     }
@@ -39,10 +41,15 @@ public class ProdutoDao implements EntitiesDao{
         manager.getTransaction().commit();
         return true;
     }
+
     @Override
     public Object searchEntitie(Object id) {
-
-        Produto produto = manager.find(Produto.class,"IDENTIFICADOR");
+        Produto produto = manager.find(Produto.class,(String)id);
         return produto;
+    }
+
+    public List<Produto> getProdutos(){
+        List<Produto> produtos = manager.createQuery("SELECT p FROM Produto p").getResultList();
+        return produtos;
     }
 }
