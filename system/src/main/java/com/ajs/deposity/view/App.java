@@ -18,6 +18,8 @@ public class App extends Application {
     private static Scene sceneLogin;
     private static Scene sceneHome;
     private static Scene sceneProducts;
+    private static Scene sceneNewProduct;
+    private static Scene sceneEditProduct;
     private static Scene sceneClients;
     private static Scene sceneNewClient;
     private static Scene sceneEditClient;
@@ -35,6 +37,12 @@ public class App extends Application {
 
         Parent fxmlProducts = loadFXML("products");
         sceneProducts = new Scene(fxmlProducts);
+
+        Parent fxmlNewProduct = loadFXML("newproduct");
+        sceneNewProduct = new Scene(fxmlNewProduct);
+
+        Parent fxmlEditProduct = loadFXML("editproduct");
+        sceneEditProduct = new Scene(fxmlEditProduct);
 
         Parent fxmlClients = loadFXML("clients");
         sceneClients = new Scene(fxmlClients);
@@ -79,6 +87,18 @@ public class App extends Application {
                 stage.setTitle("Depósito - Produtos");
                 stage.setResizable(false);
                 notifyAllListeners("products", userData);
+                break;
+            case "newproduct":
+                stage.setScene(sceneNewProduct);
+                stage.setTitle("Depósito - Adicionar Produto");
+                stage.setResizable(false);
+                notifyAllListeners("newproduct", userData);
+                break;
+            case "editproduct":
+                stage.setScene(sceneEditProduct);
+                stage.setTitle("Depósito - Editar Produto");
+                stage.setResizable(false);
+                notifyAllListeners("editproduct", userData);
                 break;
             case "clients":
                 stage.setScene(sceneClients);

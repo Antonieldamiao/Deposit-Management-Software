@@ -17,6 +17,16 @@ public class Menu {
     }
 
     @FXML
+    private void newProduct() throws IOException {
+        App.alternarTela("newproduct");
+    }
+
+    @FXML
+    private void editProduct() throws IOException {
+        App.alternarTela("editproduct");
+    }
+
+    @FXML
     private void clients() throws IOException {
         App.alternarTela("clients");
     }
