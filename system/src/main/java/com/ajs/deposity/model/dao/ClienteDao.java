@@ -5,13 +5,13 @@ import com.ajs.deposity.model.entities.Cliente;
 import com.ajs.deposity.model.interfaces.EntitiesDao;
 
 import javax.persistence.EntityManager;
+import javax.swing.*;
 
 public class ClienteDao implements EntitiesDao {
     private ConnectionFactory conFactory;
     private EntityManager manager;
 
-    public ClienteDao(){
-        manager = conFactory.getConnection().createEntityManager();
+    public ClienteDao(){manager = conFactory.getConnection().createEntityManager();
     }
 
     

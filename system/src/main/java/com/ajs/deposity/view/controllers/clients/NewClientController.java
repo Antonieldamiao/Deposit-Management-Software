@@ -11,8 +11,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 import javax.swing.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class NewClientController extends Menu {
+    @FXML
+    public JFXButton btnCancellClient;
     @FXML
     protected JFXTextField tfClientName;
     @FXML
@@ -55,14 +59,23 @@ public class NewClientController extends Menu {
     protected void novo(javafx.event.ActionEvent actionEvent){
         JOptionPane.showMessageDialog(null, "entrou p@#&*");
         ClienteDao clienteDao = new ClienteDao();
+        LocalDate data = LocalDate.of(2020,01,20);
         Cliente cliente = new Cliente(
                 tfClientID.getText(),
                 tfClientCPF.getText(),
                 tfClientName.getText(),
-                datePickerClient.getValue(),
+                data,
                 tfClientTelephone.getText());
 
+        clienteDao.addEntitie(cliente);
+        String id = tfClientID.getText();
+        String cpf =      tfClientCPF.getText();
+        String nome =      tfClientName.getText() ;
+        System.out.println(id+data+nome+cpf);
         System.out.println(cliente.toString());
+
+
+
 
     }
 

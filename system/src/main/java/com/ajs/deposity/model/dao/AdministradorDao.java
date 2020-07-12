@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 public class AdministradorDao implements EntitiesDao {
     private ConnectionFactory conFactory;
     private EntityManager manager;
+
     public AdministradorDao(){manager = conFactory.getConnection().createEntityManager();}
 
 
