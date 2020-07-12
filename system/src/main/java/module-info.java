@@ -6,6 +6,7 @@ module com.ajs.deposity.view {
     requires com.jfoenix;
     requires lombok;
     requires java.sql;
+    requires java.desktop;
 
 
     opens com.ajs.deposity.view to javafx.fxml;
