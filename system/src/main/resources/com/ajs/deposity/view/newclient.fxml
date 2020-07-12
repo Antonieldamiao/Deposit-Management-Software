@@ -100,7 +100,11 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
+<<<<<<< HEAD
       <JFXButton fx:id="btnSaveClient" buttonType="RAISED" layoutX="201.0" layoutY="466.0" prefHeight="37.0" prefWidth="120.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Salvar" textFill="WHITE">
+=======
+      <JFXButton fx:id="btnSaveClient" buttonType="RAISED" layoutX="201.0" layoutY="501.0" onAction="#novo" prefHeight="37.0" prefWidth="120.0" ripplerFill="#ffe97d" style="-fx-background-color: black;" text="Salvar" textFill="WHITE">
+>>>>>>> integração
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
